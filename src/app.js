@@ -43,3 +43,9 @@ app.post('/calculos',(req,res)=>{
 app.listen(3000,()=>{
     console.log("Escuchando el puerto 3000");
 })
+
+app.get('*',(req,res)=>{
+    res.render('error', {
+        estudiante: 'error'
+    });
+});
